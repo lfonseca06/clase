@@ -5,7 +5,8 @@ from src.exceptions import usuarioIncorrecto, passIncorrecto, emptyUser, emptyPa
 def test_acceso_correcto():
     ULogin = login("lfonseca01", "123456789")
     assert ULogin.user == "lfonseca01"
-    assert ULogin.pass == 123456789"
+    assert ULogin.passw == "123456789"
+
 
 def test_usuario_vacio():
     with pytest.raises(emptyUser):

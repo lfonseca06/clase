@@ -1,0 +1,27 @@
+from src.exceptions import  (usuarioIncorrecto, passIncorrecto, emptyUser, emptyPass)
+
+class login:
+
+    def __init__(self, user, passw):
+        self._validar_usuario(user)
+        self._validar_contrasena(passw)
+
+        self.usuario = user
+        self.contrasena = passw
+
+    def _validar_usuario(self, user):
+        if not user:
+            raise emptyUser("El usuario no pued estar vacio")
+
+        if user != "lfonseca01":
+            raise usuarioIncorrecto(f"El usuario no esta registrado: {user}")
+
+    def _validar_contrasena(self, passw):
+        if not passw:
+            raise emptyPass("La contraseña no puede estar vacía")
+
+        if passw != "123456789":
+            raise passIncorrecto(f"La contraseña es incorrecta: {passw}")
+
+    def __str__(self):
+        return f"Login(usuario='{self.usuario}')"

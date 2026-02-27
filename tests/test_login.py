@@ -5,7 +5,7 @@ from src.exceptions import usuarioIncorrecto, passIncorrecto, emptyUser, emptyPa
 def test_acceso_correcto():
     ULogin = login("lfonseca01", "123456789")
     assert ULogin.user == "lfonseca01"
-    assert ULogin.pass == "123456789"
+    assert ULogin.pass == 123456789"
 
 def test_usuario_vacio():
     with pytest.raises(emptyUser):
@@ -26,7 +26,7 @@ def test_contrasena_incorrecta():
 
 
 
-
+'''
 """
 def test_crear_producto_valido():
     producto = Producto("Laptop", 1000, 5)
@@ -46,3 +46,4 @@ def test_cantidad_negativa_error():
     with pytest.raises(CantidadInvalidaError):
         Producto
 """
+'''

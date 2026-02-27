@@ -6,8 +6,8 @@ class login:
         self._validar_usuario(user)
         self._validar_contrasena(passw)
 
-        self.usuario = user
-        self.contrasena = passw
+        self.user = user
+        self.passw = passw
 
     def _validar_usuario(self, user):
         if not user:
@@ -24,4 +24,4 @@ class login:
             raise passIncorrecto(f"La contraseña es incorrecta: {passw}")
 
     def __str__(self):
-        return f"Login(usuario='{self.usuario}')"
+        return f"Login(usuario='{self.user}')"

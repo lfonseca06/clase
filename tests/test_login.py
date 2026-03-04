@@ -1,4 +1,4 @@
-import pytest
+import pytest # type: ignore
 from src.login import login
 from src.exceptions import usuarioIncorrecto, passIncorrecto, emptyUser, emptyPass, UsuarioNoExiste
 
@@ -19,7 +19,11 @@ def test_pass_vacio():
 
 def test_user_no_existe():
     with pytest.raises(UsuarioNoExiste):
-        login("yvmalaver90", "12345678910")
+        login("yvmalaver90", "123456789")
+
+def test_user_incorrecto():
+    with pytest.raises(usuarioIncorrecto):
+        login("lfonseca","123456789")
 
 def test_contrasena_incorrecta():
     with pytest.raises(passIncorrecto):

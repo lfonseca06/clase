@@ -1,5 +1,5 @@
 class usuarioIncorrecto (Exception):
-    """Se lanza cuando el usuario ingresado no esta registrado"""
+    """Se lanza cuando el usuario ingresado es incorrecto"""
     pass
 
 class passIncorrecto (Exception):

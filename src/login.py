@@ -11,16 +11,18 @@ class login:
 
     def _validar_usuario(self, user):
         if not user:
-            raise emptyUser("El usuario no pued estar vacio")
+            raise emptyUser("El usuario no puede estar vacio")
 
+    def _usuario_incorrecto(self, user):
         if user != "lfonseca01":
-            raise usuarioIncorrecto(f"El usuario no esta registrado: {user}")
+            raise usuarioIncorrecto(f"El usuario es incorrecto: {user}")
 
     def _validar_contrasena(self, passw):
         if not passw:
             raise emptyPass("La contraseña no puede estar vacía")
 
-        if passw != "123456789":
+    def _passw_incorrecto(self, passw):
+       if passw != "123456789":
             raise passIncorrecto(f"La contraseña es incorrecta: {passw}")
 
     def __str__(self):

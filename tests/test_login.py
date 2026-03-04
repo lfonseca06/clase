@@ -16,7 +16,6 @@ def test_pass_vacio():
     with pytest.raises(emptyPass):
         login("lfonseca01", "")
 
-
 def test_user_no_existe():
     with pytest.raises(UsuarioNoExiste):
         login("yvmalaver90", "123456789")

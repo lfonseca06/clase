@@ -1,4 +1,4 @@
-from src.exceptions import  (usuarioIncorrecto, passIncorrecto, emptyUser, emptyPass)
+from src.exceptions import usuarioIncorrecto, passIncorrecto, emptyUser, emptyPass, UsuarioNoExiste
 
 class login:
 
@@ -24,6 +24,10 @@ class login:
     def _passw_incorrecto(self, passw):
        if passw != "123456789":
             raise passIncorrecto(f"La contraseña es incorrecta: {passw}")
+       
+    def _usuario_no_existe(self, user):
+        if user != "lfonseca01":
+            raise UsuarioNoExiste(f"El usuario no existe: {user}")
 
     def __str__(self):
         return f"Login(usuario='{self.user}')"

@@ -7,7 +7,6 @@ def test_acceso_correcto():
     assert ULogin.user == "lfonseca01"
     assert ULogin.passw == "123456789"
 
-
 def test_usuario_vacio():
     with pytest.raises(emptyUser):
         login("", "123456789")
@@ -18,7 +17,7 @@ def test_pass_vacio():
 
 def test_user_no_existe():
     with pytest.raises(UsuarioNoExiste):
-        login("yvmalaver90", "123456789")
+        login("lfonsec", "123456789")
 
 def test_user_incorrecto():
     with pytest.raises(usuarioIncorrecto):
@@ -27,8 +26,6 @@ def test_user_incorrecto():
 def test_contrasena_incorrecta():
     with pytest.raises(passIncorrecto):
         login("lfonseca01", "123")
-
-
 
 '''
 """

@@ -1,9 +1,9 @@
 from fastapi import FastAPI
 
-app = FastAPI
+# creamos la instancia de FastAPY 
+app = FastAPI()
+
+#Definir al menos un endpoint
 @app.get("/")
 def home():
-    return{"mensaje":"Mi API está funcionando"}
-@app.get("/eventos")
-def listar_eventos():
-    return{"eventos":["Presentación Leo","Jakarta 11", "Wildfly"]}
+    return {"mensaje": "Mi API esta funcionando"}
